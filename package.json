@@ -1,10 +1,10 @@
 {
-  "name": "iMeat-Restaurant",
+  "name": "Lotie_Barber",
   "description": "Restaurant Demo App",
   "private": true,
   "version": "1.0.0",
   "type": "module",
-  "url": "imeat-restaurant-demo.vercel.app",
+  "url": "lotie-barber-demo.vercel.app",
   "website_name": "",
   "browserslist": [
     "defaults",
@@ -19,8 +19,8 @@
     "donate": "https://www.buymeacoffee.com/nhantumbokU"
   },
   "metadata": {
-    "name": "iMeat",
-    "copyright_notice": "© 2023 iMeat Restaurant | All Rights Reserved."
+    "name": "Lotie Barber",
+    "copyright_notice": "© 2023 Lotie Barber | All Rights Reserved."
   },
   "keywords": [],
   "engines": {
@@ -28,7 +28,7 @@
     "npm": ">=9.6.7"
   },
   "license": "Apache License Version 2.0",
-  "repository": "https://github.com/KainNhantumbo/restaurant-sample-website",
+  "repository": "https://github.com/KainNhantumbo/lotie-barber-website",
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
@@ -36,20 +36,17 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@reduxjs/toolkit": "^1.9.7",
     "clsx": "^2.0.0",
     "framer-motion": "^10.16.4",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-icons": "^4.11.0",
     "react-router-dom": "^6.17.0",
-    "react-spinners": "^0.13.8",
-    "styled-components": "^5.3.10"
+    "react-spinners": "^0.13.8"
   },
   "devDependencies": {
     "@types/react": "^18.2.15",
     "@types/react-dom": "^18.2.7",
-    "@types/styled-components": "^5.1.26",
     "@typescript-eslint/eslint-plugin": "^6.0.0",
     "@typescript-eslint/parser": "^6.0.0",
     "@vitejs/plugin-react-swc": "^3.3.2",
