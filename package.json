@@ -1,0 +1,66 @@
+{
+  "name": "iMeat-Restaurant",
+  "description": "Restaurant Demo App",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "url": "imeat-restaurant-demo.vercel.app",
+  "website_name": "",
+  "browserslist": [
+    "defaults",
+    "not IE 11"
+  ],
+  "author": {
+    "name": "Kain Nhantumbo",
+    "email": "nhantumbok@gmail.com",
+    "portfolio": "https://codenut-dev.vercel.app",
+    "github": "https://github.com/KainNhantumbo",
+    "linkedin": "https://www.linkedin.com/in/kain-nhantumbo?locale=en_US",
+    "donate": "https://www.buymeacoffee.com/nhantumbokU"
+  },
+  "metadata": {
+    "name": "iMeat",
+    "copyright_notice": "© 2023 iMeat Restaurant | All Rights Reserved."
+  },
+  "keywords": [],
+  "engines": {
+    "node": ">=18.17.0",
+    "npm": ">=9.6.7"
+  },
+  "license": "Apache License Version 2.0",
+  "repository": "https://github.com/KainNhantumbo/restaurant-sample-website",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@reduxjs/toolkit": "^1.9.7",
+    "clsx": "^2.0.0",
+    "framer-motion": "^10.16.4",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-icons": "^4.11.0",
+    "react-router-dom": "^6.17.0",
+    "react-spinners": "^0.13.8",
+    "styled-components": "^5.3.10"
+  },
+  "devDependencies": {
+    "@types/react": "^18.2.15",
+    "@types/react-dom": "^18.2.7",
+    "@types/styled-components": "^5.1.26",
+    "@typescript-eslint/eslint-plugin": "^6.0.0",
+    "@typescript-eslint/parser": "^6.0.0",
+    "@vitejs/plugin-react-swc": "^3.3.2",
+    "autoprefixer": "^10.4.16",
+    "eslint": "^8.45.0",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "eslint-plugin-react-refresh": "^0.4.3",
+    "postcss": "^8.4.31",
+    "tailwindcss": "^3.3.5",
+    "typescript": "^5.0.2",
+    "vite": "^4.4.5",
+    "vite-tsconfig-paths": "^4.2.1"
+  }
+}
