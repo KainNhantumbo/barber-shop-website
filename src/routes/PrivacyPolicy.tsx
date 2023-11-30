@@ -1,13 +1,12 @@
 import Layout from '@/components/Layout';
 import { metadata } from '@/shared/data';
-import { _docs as Container } from '@/styles/routes/_docs';
 
 export default function PrivacyPolicy() {
   const { author } = metadata;
 
   return (
-    <Layout renderFooter renderHeader>
-      <Container>
+    <Layout>
+      <main>
         <section className='wrapper-container'>
           <h1>Privacy Policy</h1>
           <p>Last updated: November 17, 2023</p>
@@ -248,7 +247,7 @@ export default function PrivacyPolicy() {
             us at <strong>{author.email}</strong>.
           </p>
         </section>
-      </Container>
+      </main>
     </Layout>
   );
 }

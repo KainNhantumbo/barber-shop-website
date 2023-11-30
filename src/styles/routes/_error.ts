@@ -1,6 +1,4 @@
-import styled from 'styled-components';
-
-export const _error = styled.main`
+export const _error = `
   margin-top: 70px;
   display: grid;
   align-items: center;
@@ -19,7 +17,7 @@ export const _error = styled.main`
       font-weight: 600;
       font-size: 4.4rem;
       line-height: 2.8rem;
-      color: rgb(${({ theme }) => theme.error});
+      color: rgb();
     }
 
     h2 {
@@ -42,7 +40,7 @@ export const _error = styled.main`
     span {
       font-size: 2.6rem;
       font-weight: 600;
-      color: rgb(${({ theme }) => theme.font});
+      color: rgb();
       font-family: 'Roboto', 'Helvetica Neue', 'Inter';
     }
   }

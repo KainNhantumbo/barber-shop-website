@@ -1,6 +1,6 @@
-import styled from 'styled-components';
 
-export const _docs = styled.main`
+
+export const _docs = `
   margin-top: 50px;
   display: grid;
   align-items: center;
@@ -66,11 +66,11 @@ export const _docs = styled.main`
     }
 
     strong {
-      color: rgb(${({ theme }) => theme.primary_a});
+      color: rgb();
     }
 
     a {
-      color: rgb(${({ theme }) => theme.primary_c});
+      color: rgb();
     }
 
     em {

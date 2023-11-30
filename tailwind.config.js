@@ -23,8 +23,8 @@ export default {
       }
     },
     fontFamily: {
-      sans: ['Raleway', 'sans-serif'],
-      'sans-serif': ['Cinzel', 'Bitter', 'sans-serif']
+      sans: ['M+1m', 'sans-serif'],
+      'sans-serif': ['Literata', 'Bitter', 'sans-serif']
     }
   },
   plugins: []

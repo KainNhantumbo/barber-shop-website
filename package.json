@@ -1,10 +1,10 @@
 {
-  "name": "Lotie_Barber",
+  "name": "barbercutts",
   "description": "Restaurant Demo App",
   "private": true,
   "version": "1.0.0",
   "type": "module",
-  "url": "lotie-barber-demo.vercel.app",
+  "url": "barbercutts-demo.vercel.app",
   "website_name": "",
   "browserslist": [
     "defaults",
@@ -19,8 +19,8 @@
     "donate": "https://www.buymeacoffee.com/nhantumbokU"
   },
   "metadata": {
-    "name": "Lotie Barber",
-    "copyright_notice": "© 2023 Lotie Barber | All Rights Reserved."
+    "name": "Barbercutts",
+    "copyright_notice": "© 2023 Barbercutts | All Rights Reserved."
   },
   "keywords": [],
   "engines": {

@@ -8,14 +8,16 @@
   }
 
   body {
-    @apply w-[100%] relative font-sans m-0 bg-background dark:bg-background-dark text-font-light selection:bg-primary_a selection:text-font dark:text-font-dark selection:text-opacity-90 font-medium;
+    @apply w-[100%] relative font-sans m-0 bg-background dark:bg-background-dark text-font-light selection:bg-primary_a selection:text-font dark:text-font-dark selection:text-opacity-90 font-normal uppercase;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }
 
   html {
-    @apply overflow-x-hidden m-0 p-0  scroll-smooth;
+    @apply overflow-x-hidden m-0 p-0 scroll-smooth;
   }
+
+  
 }
 
 @layer components {
