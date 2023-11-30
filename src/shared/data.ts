@@ -9,7 +9,7 @@ export const metadata = {
   websiteName: Package.website_name,
   tags: Package.keywords.join(' '),
   websiteUrl: Package.url,
-  copyright: Package.metadata.copyright_notice,
+  copyright: Package.metadata.copyright_notice
 };
 
 export const reviews = [
@@ -33,5 +33,29 @@ export const reviews = [
   }
 ];
 
-export const footerAnchors: { name: string; url: string }[][] = [];
+export const cuts = [
+  'clipper',
+  'hair cut',
+  'shaving',
+  'facial',
+  'trimming',
+  'pedicure'
+];
 
+export const navigation: { name: string; url: string }[][] = [
+  [
+    { name: 'skin care', url: '/' },
+    { name: 'hair treatment', url: '/' },
+    { name: 'beard treatment', url: '/' }
+  ],
+  [
+    { name: "men's haircut", url: '/' },
+    { name: 'childrens haircut`', url: '/' },
+    { name: 'hair black shine', url: '/' }
+  ],
+  [
+    { name: 'shaving regular', url: '/' },
+    { name: 'beard care', url: '/' },
+    { name: 'beard grooming', url: '/' }
+  ]
+];

@@ -18,22 +18,42 @@ export default function Home() {
                   <h2>Blog</h2>
                   <p>Latest grooming tips & solutions</p>
                 </div>
-                <img src='' alt='cutter potion image' />
+                <img
+                  loading='lazy'
+                  decoding='async'
+                  src=''
+                  alt='cutter potion image'
+                />
               </div>
               <div>
                 <div>
                   <h2>Hair stylist</h2>
                   <p>Lucas Benjamin</p>
                 </div>
-                <img src='' alt='stylist image' />
+                <img
+                  loading='lazy'
+                  decoding='async'
+                  src=''
+                  alt='stylist image'
+                />
               </div>
               <div>
                 <div>
-                  <img src='' alt='barber customer chair image' />
+                  <img
+                    loading='lazy'
+                    decoding='async'
+                    src=''
+                    alt='barber customer chair image'
+                  />
                   <p>Saloon service - barbering grooming</p>
                 </div>
                 <div>
-                  <img src='' alt='cutter tools' />
+                  <img
+                    loading='lazy'
+                    decoding='async'
+                    src=''
+                    alt='cutter tools'
+                  />
                   <div>
                     <span>Our special</span>
                     <Link to='/'>Haircuts</Link>
@@ -56,7 +76,12 @@ export default function Home() {
                 <p>Detail and a passion for creating unique styles.</p>
               </div>
               <div>
-                <img src='' alt='cutter oils image' />
+                <img
+                  loading='lazy'
+                  decoding='async'
+                  src=''
+                  alt='cutter oils image'
+                />
                 <p>Transform yourself</p>
                 <p>With the barbercutts</p>
               </div>
@@ -65,7 +90,12 @@ export default function Home() {
 
           <section className='w-[100%] max-w-[960px] mx-auto flex items-center justify-center p-4'>
             <section>
-              <img src='' alt='cutting hair demo image' />
+              <img
+                loading='lazy'
+                decoding='async'
+                src=''
+                alt='cutting hair demo image'
+              />
               <div>
                 <h2>Experience the art of barbering</h2>
                 <p>
@@ -123,8 +153,18 @@ export default function Home() {
                   <p>cities we're in</p>
                 </div>
               </div>
-              <img src='' alt='well designed hair men model image' />
-              <img src='' alt='well designed face men model image' />
+              <img
+                loading='lazy'
+                decoding='async'
+                src=''
+                alt='well designed hair men model image'
+              />
+              <img
+                loading='lazy'
+                decoding='async'
+                src=''
+                alt='well designed face men model image'
+              />
             </section>
           </section>
 
@@ -146,10 +186,8 @@ export default function Home() {
             </section>
           </section>
 
-          <section className='w-[100%] max-w-[960px] mx-auto flex items-center justify-center p-4'>
+          <section className='w-[100%] max-w-[960px] mx-auto flex items-center justify-center p-4'></section>
 
-          </section>
-          
           <section className='w-[100%] max-w-[960px] mx-auto flex items-center justify-center p-4'></section>
         </article>
       </main>
