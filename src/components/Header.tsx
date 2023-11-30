@@ -1,21 +1,13 @@
 import clsx from 'clsx';
-import { useState, useEffect } from 'react';
-import { m as motion, AnimatePresence } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { metadata } from '@/shared/data';
+import logoImage from '@/assets/icon.png';
 import { RiCloseLine, RiMenu3Line } from 'react-icons/ri';
-import { useInnerWindowSize } from '@/hooks/useInnerWindowSize';
+import { m as motion, AnimatePresence } from 'framer-motion';
+import { useHideHeader } from '@/hooks/useHideHeader';
 
 export default function Header() {
-  const BREAKPOINT: number = 768;
-  const [isMenu, setIsMenu] = useState<boolean>(false);
-  const windowInnerSize = useInnerWindowSize();
-
-  const toggleMenu = (): void => setIsMenu((current) => !current);
-
-  useEffect((): void => {
-    windowInnerSize.width > BREAKPOINT ? setIsMenu(true) : setIsMenu(false);
-  }, [windowInnerSize]);
+  const { isHeader, toggleHeader } = useHideHeader(768);
 
   return (
     <header
@@ -24,7 +16,7 @@ export default function Header() {
       }>
       <div className='w-full mx-auto xl:max-w-[1200px]'>
         <AnimatePresence>
-          {isMenu ? (
+          {isHeader ? (
             <motion.nav
               role='main'
               initial={{ translateY: -70 }}
@@ -33,33 +25,30 @@ export default function Header() {
               exit={{
                 opacity: 0,
                 translateY: -70,
-                transition: { duration: 0.25 },
+                transition: { duration: 0.25 }
               }}
-              style={{ display: isMenu ? 'flex' : 'none' }}
+              style={{ display: isHeader ? 'flex' : 'none' }}
               className='w-full h-full relative flex flex-col md:flex-row items-center justify-between gap-5 bg-foreground p-4 pt-10 rounded-lg -top-2 md:rounded-none md:p-0 md:static md:bg-transparent text-[.95rem]'>
-              {/* <div className='w-fit flex flex-col md:flex-row items-center gap-4 '>
-                <Link to={'/'} className='base-link'>
-                  <span>Overview</span>
-                </Link>
-                <Link to={'/'} className='base-link'>
-                  <span>Delivery</span>
-                </Link>
-                <Link to={'/'} className='base-link'>
-                  <span>Health & Safety</span>
-                </Link>
-              </div>
-
-              <div className='w-fit flex flex-col md:flex-row items-center gap-2'>
+              <div className='w-fit flex flex-col md:flex-row items-center gap-4 '>
                 <Link to={'/'} className='base-link'>
                   <span>Services</span>
                 </Link>
                 <Link to={'/'} className='base-link'>
-                  <span>Offers</span>
+                  <span>Locations</span>
                 </Link>
                 <Link to={'/'} className='base-link'>
-                  <span>Menu</span>
+                  <span>Gallery</span>
                 </Link>
-              </div> */}
+                <Link to={'/'} className='base-link'>
+                  <span>Shop</span>
+                </Link>
+                <Link to={'/'} className='base-link'>
+                  <span>About</span>
+                </Link>
+                <Link to={'/'} className='base-link'>
+                  <span>Contact Us</span>
+                </Link>
+              </div>
             </motion.nav>
           ) : null}
         </AnimatePresence>
@@ -70,17 +59,24 @@ export default function Header() {
           </Link>
         </div>
 
+        <div className='absolute top-2 left-10 md:left-[calc(50%_-_20px)] w-fit flex flex-col md:flex-row items-center gap-2'>
+          <Link to={'/'} className='base-link'>
+            <img src={logoImage} alt='logo image' />
+            <span className='text-lg font-semibold'>Contact Us</span>
+          </Link>
+        </div>
+
         <motion.button
           whileTap={{ scale: 0.8 }}
-          title={`${isMenu ? 'Close menu drawer' : 'Open menu drawer'}`}
+          title={`${isHeader ? 'Close menu drawer' : 'Open menu drawer'}`}
           className={clsx(
             'base-corner-button fixed top-2 right-5 border-none  md:hidden',
             {
-              'bg-primary_a-light dark:bg-primary_a-dark ': isMenu,
+              'bg-primary_a-light dark:bg-primary_a-dark ': isHeader
             }
           )}
-          onClick={toggleMenu}>
-          {!isMenu ? (
+          onClick={toggleHeader}>
+          {!isHeader ? (
             <RiMenu3Line
               className={
                 'stroke-font-light dark:stroke-font-dark w-5 h-5 pointer-events-none'
