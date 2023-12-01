@@ -6,8 +6,8 @@ export default function PrivacyPolicy() {
 
   return (
     <Layout>
-      <main>
-        <section className='wrapper-container'>
+      <main className='mt-20 grid items-center justify-center'>
+        <section className='text-justify flex gap-3 flex-col p-4 w-full max-w-[980px] normal-case'>
           <h1>Privacy Policy</h1>
           <p>Last updated: November 17, 2023</p>
           <p>

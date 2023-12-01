@@ -50,7 +50,7 @@ export default function Footer() {
         <section>
           <div>
             <Link to={'/'}>Terms & Conditions</Link>
-            <Link to={'/'}>Privacy</Link>
+            <Link to={'/docs/privacy-policy'}>Privacy</Link>
           </div>
           <p>All rights to {metadata.appName} &copy;23</p>
           <div>
