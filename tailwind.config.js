@@ -14,7 +14,7 @@ export default {
         error: { DEFAULT: '#FD384F', light: '#FD384F', dark: '#FD384F' },
         font: { DEFAULT: '#1E1A17', light: '#1E1A17', dark: '#C6C5CD' },
         black: { DEFAULT: '#101010', light: '#101010', dark: '#1B1E20' },
-        white: { DEFAULT: '#fff', light: '#fff', dark: '#FCFCFC' },
+        white: { DEFAULT: '#ffffffcc', light: '#ffffffcc', dark: '#FCFCFC' },
         primary_a: { DEFAULT: '#FE6D2C', light: '#FE6D2C', dark: '#FE6D2C' },
         primary_b: { DEFAULT: '#FD6C2A', light: '#FD6C2A', dark: '#FD6C2A' },
         primary_c: { DEFAULT: '#64382B', light: '#64382B', dark: '#64382B' },

@@ -49,7 +49,7 @@ export default function Footer() {
                   <Link
                     to={item.url}
                     key={index}
-                    className='px-2 transition-colors rounded-sm  hover:bg-primary_c'>
+                    className='px-2 transition-colors rounded-sm hover:bg-primary_c'>
                     <span>{item.name}</span>
                   </Link>
                 ))}
