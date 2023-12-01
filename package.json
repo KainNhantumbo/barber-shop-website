@@ -4,7 +4,7 @@
   "private": true,
   "version": "1.0.0",
   "type": "module",
-  "url": "barbercutts-demo.vercel.app",
+  "url": "https://barbercutts-demo.vercel.app",
   "website_name": "",
   "browserslist": [
     "defaults",
@@ -28,7 +28,7 @@
     "npm": ">=9.6.7"
   },
   "license": "Apache License Version 2.0",
-  "repository": "https://github.com/KainNhantumbo/barbercutts-website",
+  "repository": "https://github.com/KainNhantumbo/barber-shop-website",
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
