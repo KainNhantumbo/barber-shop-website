@@ -1,6 +1,6 @@
 {
   "name": "barbercutts",
-  "description": "Restaurant Demo App",
+  "description": "barber shop demo website",
   "private": true,
   "version": "1.0.0",
   "type": "module",
@@ -28,7 +28,7 @@
     "npm": ">=9.6.7"
   },
   "license": "Apache License Version 2.0",
-  "repository": "https://github.com/KainNhantumbo/lotie-barber-website",
+  "repository": "https://github.com/KainNhantumbo/barbercutts-website",
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",

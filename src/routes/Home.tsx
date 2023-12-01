@@ -1,12 +1,11 @@
-import Layout from '@/components/Layout';
 import { reviews } from '@/shared/data';
-import { RiArrowRightLine } from 'react-icons/ri';
 import { Link } from 'react-router-dom';
+import Layout from '@/components/Layout';
+import { RiArrowRightLine } from 'react-icons/ri';
 import barberImage_00 from '@/assets/barber-tools-image-00.jpg';
 import barberImage_01 from '@/assets/barber-tools-image-01.jpg';
 import barberImage_02 from '@/assets/barber-tools-image-02.jpg';
 import barberImage_03 from '@/assets/barber-tools-image-03.jpg';
-import barberImage_04 from '@/assets/barber-tools-image-04.jpg';
 import barberImage_05 from '@/assets/barber-tools-image-05.jpg';
 import barberImage_06 from '@/assets/barber-tools-image-06.jpg';
 import barberImage_07 from '@/assets/barber-tools-image-07.jpg';

@@ -2,10 +2,10 @@ import clsx from 'clsx';
 import { Link } from 'react-router-dom';
 import { metadata } from '@/shared/data';
 import logoImage from '@/assets/icon.png';
-import { RiArrowRightLine, RiCloseLine, RiMenuLine } from 'react-icons/ri';
-import { m as motion, AnimatePresence } from 'framer-motion';
 import { useHideHeader } from '@/hooks/useHideHeader';
+import { m as motion, AnimatePresence } from 'framer-motion';
 import { useInnerWindowSize } from '@/hooks/useInnerWindowSize';
+import { RiArrowRightLine, RiCloseLine, RiMenuLine } from 'react-icons/ri';
 
 const navigation = ['services', 'locations', 'galery', 'shop', 'about'];
 
