@@ -12,7 +12,7 @@ export default function Footer() {
   return (
     <footer className='w-full bg-black-dark flex flex-col items-center justify-center p-3'>
       <section className='w-full flex flex-col gap-8 text-[#ffffffcc] font-medium max-w-[890px]'>
-        <section className='w-full flex flex-row font-serif justify-between border-dotted border-b-[3px] border-[#ffffff4c] py-1 sm:py-4 gap-2'>
+        <section className='w-full flex flex-row font-serif justify-between base-border py-1 sm:py-4 gap-2'>
           {cuts.map((cut, index) => (
             <p key={index} className='text-xl mobile-x:text-2xl sm:text-4xl'>
               {cut}

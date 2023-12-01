@@ -56,6 +56,10 @@
     @apply hover:text-primary_c text-center sm:text-left dark:hover:text-primary_c-dark transition-colors font-semibold;
   }
 
+  .base-border {
+    @apply border-dotted border-b-[3px] border-[#ffffff4c];
+  }
+
   .base-corner-button {
     all: unset;
     @apply rounded-lg border-solid border-[1px] border-opacity-30 border-font-light dark:border-font-dark w-fit cursor-pointer place-content-center grid p-1;
