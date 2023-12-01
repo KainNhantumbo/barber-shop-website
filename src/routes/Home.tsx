@@ -11,8 +11,8 @@ export default function Home() {
           <section className='w-[100%] max-w-[960px] mx-auto flex items-center justify-center p-4'>
             <section>
               <div>
-                <h1>
-                  <i>Make</i> <i>unique</i> <i>style</i>
+                <h1 className='group font-serif'>
+                  <i className=''>Make</i> <i>unique</i> <i>style</i>
                 </h1>
                 <div>
                   <h2>Blog</h2>
