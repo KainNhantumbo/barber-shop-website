@@ -222,10 +222,25 @@ export default function Home() {
           </section>
 
           <section className='w-full max-w-[890px] mx-auto flex items-center justify-center'>
-            <section className='flex flex-col items-center gap-4'>
+            <section className='flex flex-col items-center gap-12'>
               <h2 className='font-bold font-serif text-5xl base-border border-t-[3px] py-4 border-black-dark'>
                 Making people look awesome
               </h2>
+              <div className='w-full  flex flex-col sm:flex-row gap-6 justify-between items-center'>
+                <div className='w-full max-w-[280px] flex flex-col gap-4'>
+                  <h3 className='font-bold text-8xl'>5.6K</h3>
+                  <p className='font-semibold'>
+                    Satisfied customers who always come back to us.
+                  </p>
+                </div>
+                <div className='w-full max-w-[280px] flex flex-col gap-4'>
+                  <h3 className='font-bold text-8xl'>28+</h3>
+                  <p className='font-semibold'>
+                    Years of love and experience in the industry.
+                  </p>
+                </div>
+                
+              </div>
               <div className='w-full flex flex-wrap justify-around items-center gap-3 '>
                 {reviews.map(({ author, carrier, quote }, index) => (
                   <div
