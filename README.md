@@ -1,21 +1,20 @@
-<!-- # 🍖 Restaurant Website (React.JS + Typescript + Tailwindcss)
+# 💈Barber Shop Website (React.JS + Typescript + Tailwindcss)
 
-Hi, welcome. This this my first project using tailwindcss. I wanted to pratice the _**new skill**_ by building this project. I still have to get used to it, but you wanna know what?! It was fun!!
+Hi, welcome. This this my second project using completely tailwindcss. I wanted to pratice and enhance this _**new skill**_ by building this project. By now on, I am planning to use it in my future projects.
 
-> **Live preview: [https://imeat-restaurant-demo.vercel.app](https://imeat-restaurant-demo.vercel.app)**
+> **Live preview: [https://barbercutts-demo.vercel.app](https://barbercutts-demo.vercel.app)**
 
-**Preview screenshots:**
+📷 **Preview screenshots:**
 
 |            Mobile             |             Desktop             |
 | :---------------------------: | :-----------------------------: |
-| ![](./public/mobile-demo.png) | ![](./public//desktop-demo.png) |
+| ![](./src/assets/mobile-demo.png) | ![](./src/assets/desktop-demo.png) |
 
 ## 🐾 Project Stack
 
 - **Typescript** - a superset language of Javascript that provides typechecking.
 - **Vite** - a next generation frontend tooling.
 - **React.JS** - library used to build big, fast Web apps with JavaScript.
-- **Styled Components** - library to write styles for components.
 - **Tailwindcss** - a utility first styling library - fast, flexible, and reliable with zero-runtime.
 
 ## 🏗️ Testing and Local Setup
@@ -61,4 +60,4 @@ Copyright &copy; 2023 Kain Nhantumbo.
 
 Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at http://www.apache.org/licenses/LICENSE-2.0
 
-Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License. -->
+Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License.
