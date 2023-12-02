@@ -10,13 +10,14 @@ import barberImage_05 from '@/assets/barber-tools-image-05.jpg';
 import barberImage_06 from '@/assets/barber-tools-image-06.jpg';
 import barberImage_07 from '@/assets/barber-tools-image-07.jpg';
 import barberImage_08 from '@/assets/barber-tools-image-08.jpg';
+import barberImage_09 from '@/assets/barber-tools-image-09.jpg';
 import barberImage_10 from '@/assets/barber-tools-image-10.jpg';
 
 export default function Home() {
   return (
     <Layout>
       <main className='w-full pt-[80px]'>
-        <article className='w-full p-8 flex flex-col gap-14'>
+        <article className='w-full p-4 mobile:p-8 flex flex-col gap-14'>
           <section className='w-full max-w-[890px] mx-auto flex items-center justify-center'>
             <section className='w-full flex flex-col md:flex-row gap-8 justify-between items-center'>
               <div className='flex flex-col gap-8'>
@@ -239,7 +240,6 @@ export default function Home() {
                     Years of love and experience in the industry.
                   </p>
                 </div>
-                
               </div>
               <div className='w-full flex flex-wrap justify-around items-center gap-3 '>
                 {reviews.map(({ author, carrier, quote }, index) => (
@@ -256,6 +256,55 @@ export default function Home() {
                     </div>
                   </div>
                 ))}
+              </div>
+            </section>
+          </section>
+
+          <section className='w-full max-w-[890px] mx-auto flex items-center justify-center'>
+            <section className='w-full flex flex-col sm:flex-row items-center bg-black gap-4 '>
+              <img
+                src={barberImage_09}
+                alt='barber seats'
+                className='max-w-[280px] w-[300px] h-[300px] sm:w-full sm:h-auto object-cover'
+              />
+              <div className='flex flex-col text-white w-full gap-4 p-4'>
+                <div className='flex flex-col gap-3'>
+                  <h2 className='text-4xl font-serif font-bold'>
+                    Book a Seat Now
+                  </h2>
+                  <p className='font-medium'>
+                    Fill out this form and get out your seat.
+                  </p>
+                </div>
+
+                <form
+                  onSubmit={(e) => e.preventDefault()}
+                  className='w-full flex flex-col text-white font-medium  gap-4'>
+                  <input
+                    type='date'
+                    defaultValue={'2023-12-07'}
+                    className='outline-none max-w-md p-2 bg-primary_c bg-opacity-60'
+                  />
+                  <input
+                    type='time'
+                    defaultValue={'15:40'}
+                    className='outline-none max-w-md p-2 bg-primary_c bg-opacity-60'
+                  />
+                  <input
+                    type='number'
+                    placeholder='Number of people'
+                    min={1}
+                    max={20}
+                    maxLength={2}
+                    className='outline-none max-w-md p-2 bg-primary_c bg-opacity-60'
+                  />
+                  <button
+                    type='submit'
+                    className='outline-none py-2 px-3 flex gap-3 items-center w-fit bg-primary_c bg-opacity-60 hover:bg-primary_a hover:text-font transition-colors'>
+                    <span>Book now</span>
+                    <RiArrowRightLine/>
+                  </button>
+                </form>
               </div>
             </section>
           </section>
