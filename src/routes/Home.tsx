@@ -1,6 +1,7 @@
 import { reviews } from '@/shared/data';
 import { Link } from 'react-router-dom';
 import Layout from '@/components/Layout';
+import { m as motion } from 'framer-motion';
 import { RiArrowRightLine } from 'react-icons/ri';
 import barberImage_00 from '@/assets/barber-tools-image-00.jpg';
 import barberImage_01 from '@/assets/barber-tools-image-01.jpg';
@@ -12,6 +13,7 @@ import barberImage_07 from '@/assets/barber-tools-image-07.jpg';
 import barberImage_08 from '@/assets/barber-tools-image-08.jpg';
 import barberImage_09 from '@/assets/barber-tools-image-09.jpg';
 import barberImage_10 from '@/assets/barber-tools-image-10.jpg';
+import Reveal from '@/components/Reveal';
 
 export default function Home() {
   return (
@@ -20,11 +22,17 @@ export default function Home() {
         <article className='w-full p-4 mobile:p-8 flex flex-col gap-14'>
           <section className='w-full max-w-[890px] mx-auto flex items-center justify-center'>
             <section className='w-full flex flex-col md:flex-row gap-8 justify-between items-center'>
-              <div className='flex flex-col gap-8'>
-                <h1 className='font-serif font-bold text-8xl flex flex-col relative  after:absolute  after:content-none after:w-40 after:h-40 after:bg-black after:top-0 after:left-0 after:z-20'>
+              <motion.div
+                initial={{ y: 90 }}
+                animate={{ y: 0 }}
+                className='flex flex-col gap-8'>
+                <motion.h1
+                  initial={{ scale: 0, y: 60 }}
+                  animate={{ scale: 1, y: 0 }}
+                  className='font-serif font-bold text-8xl flex flex-col relative  after:absolute  after:content-none after:w-40 after:h-40 after:bg-black after:top-0 after:left-0 after:z-20'>
                   <i className=''>Make</i> <i className='pl-12'>unique</i>{' '}
                   <i>style</i>
-                </h1>
+                </motion.h1>
                 <div className='flex flex-col gap-2'>
                   <h2 className='font-bold text-xl'>Blog</h2>
                   <p className='font-bold text-sm text-primary_c'>
@@ -38,8 +46,12 @@ export default function Home() {
                   alt='cutter potion image'
                   className='w-full max-w-[220px] object-cover mx-auto border-primary_a border-b-[4px]'
                 />
-              </div>
-              <div className='flex flex-col gap-8 items-center'>
+              </motion.div>
+              <motion.div
+                initial={{ y: 200, scale: 0 }}
+                animate={{ y: 0, scale: 1 }}
+                transition={{ delay: 0.2 }}
+                className='flex flex-col gap-8 items-center'>
                 <div className='flex flex-col items-center'>
                   <h2 className='text-primary_c font-medium'>Hair stylist</h2>
                   <p className='font-bold text-xl'>Lucas Benjamin</p>
@@ -51,8 +63,12 @@ export default function Home() {
                   alt='stylist image'
                   className='w-full max-w-[220px] object-cover'
                 />
-              </div>
-              <div className='flex flex-col gap-12 w-full max-w-[200px]'>
+              </motion.div>
+              <motion.div
+                initial={{ y: 200, scale: 0 }}
+                animate={{ y: 0, scale: 1 }}
+                transition={{ delay: 0.4 }}
+                className='flex flex-col gap-12 w-full max-w-[200px]'>
                 <div className='flex gap-2 items-center'>
                   <img
                     loading='lazy'
@@ -73,9 +89,11 @@ export default function Home() {
                     className='w-full object-cover'
                   />
                   <div className='flex gap-3 items-center justify-between'>
-                    <span className='font-bold max-w-[40px] text-sm'>
-                      Our special
-                    </span>
+                    <Reveal>
+                      <span className='font-bold max-w-[40px] text-sm'>
+                        Our special
+                      </span>
+                    </Reveal>
                     <Link
                       to='/'
                       className='border-solid border-b-black border-b-[2px] hover:text-primary_c transition-colors'>
@@ -90,7 +108,7 @@ export default function Home() {
                   <span>Book an apointment</span>
                   <RiArrowRightLine />
                 </Link>
-              </div>
+              </motion.div>
             </section>
           </section>
 
@@ -302,7 +320,7 @@ export default function Home() {
                     type='submit'
                     className='outline-none py-2 px-3 flex gap-3 items-center w-fit bg-primary_c bg-opacity-60 hover:bg-primary_a hover:text-font transition-colors'>
                     <span>Book now</span>
-                    <RiArrowRightLine/>
+                    <RiArrowRightLine />
                   </button>
                 </form>
               </div>
