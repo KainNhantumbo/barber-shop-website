@@ -4,13 +4,30 @@ import { m as motion, useInView, useAnimation } from 'framer-motion';
 type Props = {
   children: JSX.Element;
   width?: 'fit-content' | '100%';
+  delay?: number;
+  inverseDirection?: boolean;
 };
 
-export default function Reveal({ children, width = 'fit-content' }: Props) {
+export default function Reveal({
+  children,
+  delay = 0,
+  inverseDirection = false,
+  width = 'fit-content'
+}: Props) {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true });
   const revealControls = useAnimation();
   const slideControls = useAnimation();
+
+  const customVariants = !inverseDirection
+    ? {
+        hidden: { left: 0 },
+        visible: { left: '100%' }
+      }
+    : {
+        hidden: { right: 0 },
+        visible: { right: '100%' }
+      };
 
   useEffect(() => {
     if (isInView) {
@@ -32,13 +49,10 @@ export default function Reveal({ children, width = 'fit-content' }: Props) {
         {children}
       </motion.div>
       <motion.div
-        variants={{
-          hidden: { left: 0 },
-          visible: { left: '100%' }
-        }}
+        variants={customVariants}
         initial='hidden'
         animate={slideControls}
-        transition={{ duration: 0.5, ease: 'easeIn' }}
+        transition={{ duration: 0.5, ease: 'easeIn', delay }}
         style={{
           position: 'absolute',
           top: 5,

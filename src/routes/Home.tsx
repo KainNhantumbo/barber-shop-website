@@ -30,8 +30,15 @@ export default function Home() {
                   initial={{ scale: 0, y: 60 }}
                   animate={{ scale: 1, y: 0 }}
                   className='font-serif font-bold text-8xl flex flex-col relative  after:absolute  after:content-none after:w-40 after:h-40 after:bg-black after:top-0 after:left-0 after:z-20'>
-                  <i className=''>Make</i> <i className='pl-12'>unique</i>{' '}
-                  <i>style</i>
+                  <Reveal inverseDirection>
+                    <>Make</>
+                  </Reveal>{' '}
+                  <Reveal delay={0.2}>
+                    <i className='pl-12'>unique</i>
+                  </Reveal>
+                  <Reveal inverseDirection delay={0.4}>
+                    <i>style</i>
+                  </Reveal>
                 </motion.h1>
                 <div className='flex flex-col gap-2'>
                   <h2 className='font-bold text-xl'>Blog</h2>
@@ -118,8 +125,12 @@ export default function Home() {
                 <h2 className='text-4xl font-bold font-serif'>
                   Unleash your swagger
                 </h2>
-                <p>Much more than just cutting hair.</p>
-                <p>Detail and a passion for creating unique styles.</p>
+                <Reveal>
+                  <p>Much more than just cutting hair.</p>
+                </Reveal>
+                <Reveal>
+                  <p>Detail and a passion for creating unique styles.</p>
+                </Reveal>
               </div>
               <div className='relative w-[200px] h-[200px]'>
                 <img
@@ -141,30 +152,43 @@ export default function Home() {
 
           <section className='w-full max-w-[890px] mx-auto flex items-center justify-center '>
             <section className='w-full flex flex-col md:flex-row items-center md:items-start gap-8 justify-between'>
-              <img
-                loading='lazy'
-                decoding='async'
-                src={barberImage_01}
-                alt='cutting hair demo image'
-                className='w-full h-full max-w-[380px] object-cover  border-primary_c border-l-[4px]'
-              />
-              <div className='w-full max-w-[420px] flex flex-col gap-5'>
-                <h2 className='text-4xl font-bold font-serif'>
-                  Experience the art of barbering
-                </h2>
-                <p>
-                  Barbering an ancient art form that old passed down from
-                  generation and the styling of men's hair, facial hair and the
-                  scalp. The art of barbering has evolved over time and has
-                  become a cultural and social experience.
-                </p>
+              <motion.div
+                initial={{ x: -200, opacity: 0 }}
+                transition={{ delay: 0.2 }}
+                whileInView={{ x: 0, opacity: 1 }}>
+                <img
+                  loading='lazy'
+                  decoding='async'
+                  src={barberImage_01}
+                  alt='cutting hair demo image'
+                  className='w-full h-full max-w-[380px] object-cover  border-primary_c border-l-[4px]'
+                />
+              </motion.div>
+              <motion.div
+                initial={{ x: 200, opacity: 0 }}
+                transition={{ delay: 0.2 }}
+                whileInView={{ x: 0, opacity: 1 }}
+                className='w-full max-w-[420px] flex flex-col gap-5'>
+                <Reveal>
+                  <h2 className='text-4xl font-bold font-serif'>
+                    Experience the art of barbering
+                  </h2>
+                </Reveal>
+                <Reveal delay={0.5}>
+                  <p>
+                    Barbering an ancient art form that old passed down from
+                    generation and the styling of men's hair, facial hair and
+                    the scalp. The art of barbering has evolved over time and
+                    has become a cultural and social experience.
+                  </p>
+                </Reveal>
                 <Link
                   to={'/'}
                   className='w-full flex flex-nowrap items-center gap-2 hover:text-primary_c transition-colors'>
                   <span className='font-semibold'>Get makeover</span>
                   <RiArrowRightLine className='stroke-1' />
                 </Link>
-              </div>
+              </motion.div>
             </section>
           </section>
 
@@ -176,15 +200,21 @@ export default function Home() {
                 alt='barber tools image'
                 className='absolute w-full object-cover top-0 left-00 -z-10 brightness-[0.3]  grayscale-[90%]'
               />
-              <h2 className='text-2xl mobile-x:text-4xl font-bold font-serif base-border max-w-[320px] text-center'>
-                Groome with the best barber
-              </h2>
+              <Reveal>
+                <h2 className='text-2xl mobile-x:text-4xl font-bold font-serif base-border max-w-[320px] text-center'>
+                  Groome with the best barber
+                </h2>
+              </Reveal>
               <div className='w-full bg-primary_c md:bg-transparent py-6 px-4 md:px-12  flex flex-col sm:flex-row gap-8 justify-between items-center font-medium'>
                 <div className='w-full flex flex-col gap-3 max-w-[210px]'>
-                  <h3 className='text-2xl font-semibold font-serif base-border'>
-                    The ultimate men's grooming
-                  </h3>
-                  <p>Our private service will beat the doubt.</p>
+                  <Reveal delay={0.2}>
+                    <>
+                      <h3 className='text-2xl font-semibold font-serif base-border'>
+                        The ultimate men's grooming
+                      </h3>
+                      <p>Our private service will beat the doubt.</p>
+                    </>
+                  </Reveal>
 
                   <Link
                     to={'/'}
@@ -194,14 +224,18 @@ export default function Home() {
                   </Link>
                 </div>
                 <div className='w-full flex flex-col gap-4 max-w-[210px] font-semibold'>
-                  <p className='relative border-solid border-[#ffffff4c] border-t-[1px] border-b-[1px] before:content-none before:absolute before:top-0 before:left-0 before:w-[10px] before:h-[30px] before:bg-[#ffffff4c] before:z-20 md:pl-14'>
-                    <i className='text-[#ffffff8c]'>Product - </i>sharp beard
-                    grooming tips
-                  </p>
-                  <p className='border-solid border-[#ffffff4c] border-b-[1px] pb-1'>
-                    <i className='text-[#ffffff8c]'>Ingredients - </i>glycerin,
-                    rosemary, coco-glucoside, alchemilla, betaine.
-                  </p>
+                  <Reveal>
+                    <>
+                      <p className='relative border-solid border-[#ffffff4c] border-t-[1px] border-b-[1px] before:content-none before:absolute before:top-0 before:left-0 before:w-[10px] before:h-[30px] before:bg-[#ffffff4c] before:z-20 md:pl-14'>
+                        <i className='text-[#ffffff8c]'>Product - </i>sharp
+                        beard grooming tips
+                      </p>
+                      <p className='border-solid border-[#ffffff4c] border-b-[1px] pb-1'>
+                        <i className='text-[#ffffff8c]'>Ingredients - </i>
+                        glycerin, rosemary, coco-glucoside, alchemilla, betaine.
+                      </p>
+                    </>
+                  </Reveal>
                 </div>
               </div>
             </section>
@@ -210,17 +244,27 @@ export default function Home() {
           <section className='w-full max-w-[890px] mx-auto flex items-center justify-center md:mt-12'>
             <section className='w-full flex flex-col md:flex-row items-center gap-3 justify-between'>
               <div className='w-full max-w-[280px] flex flex-col gap-4'>
-                <h2 className='font-bold font-serif text-4xl base-border border-black-dark'>
-                  Transform your boring look
-                </h2>
-                <p className='normal-case font-medium'>
-                  A new hair cut can completely transform your face, putting
-                  emphasis on different areas of your facial features.
-                </p>
+                <Reveal inverseDirection>
+                  <h2 className='font-bold font-serif text-4xl base-border border-black-dark'>
+                    Transform your boring look
+                  </h2>
+                </Reveal>
+                <Reveal inverseDirection delay={0.2}>
+                  <p className='normal-case font-medium'>
+                    A new hair cut can completely transform your face, putting
+                    emphasis on different areas of your facial features.
+                  </p>
+                </Reveal>
 
                 <div className='flex flex-nowrap items-center gap-2'>
-                  <p className='font-serif font-bold text-6xl'>48</p>
-                  <p className='max-w-[80px] font-semibold'>cities we're in</p>
+                  <Reveal inverseDirection delay={0.4}>
+                    <>
+                      <p className='font-serif font-bold text-6xl'>48</p>
+                      <p className='max-w-[80px] font-semibold'>
+                        cities we're in
+                      </p>
+                    </>
+                  </Reveal>
                 </div>
               </div>
               <img
@@ -246,23 +290,30 @@ export default function Home() {
                 Making people look awesome
               </h2>
               <div className='w-full  flex flex-col sm:flex-row gap-6 justify-between items-center'>
-                <div className='w-full max-w-[280px] flex flex-col gap-4'>
-                  <h3 className='font-bold text-8xl'>5.6K</h3>
-                  <p className='font-semibold'>
-                    Satisfied customers who always come back to us.
-                  </p>
-                </div>
-                <div className='w-full max-w-[280px] flex flex-col gap-4'>
-                  <h3 className='font-bold text-8xl'>28+</h3>
-                  <p className='font-semibold'>
-                    Years of love and experience in the industry.
-                  </p>
-                </div>
+                <Reveal inverseDirection>
+                  <div className='w-full max-w-[280px] flex flex-col gap-4'>
+                    <h3 className='font-bold text-8xl'>5.6K</h3>
+                    <p className='font-semibold'>
+                      Satisfied customers who always come back to us.
+                    </p>
+                  </div>
+                </Reveal>
+                <Reveal>
+                  <div className='w-full max-w-[280px] flex flex-col gap-4'>
+                    <h3 className='font-bold text-8xl'>28+</h3>
+                    <p className='font-semibold'>
+                      Years of love and experience in the industry.
+                    </p>
+                  </div>
+                </Reveal>
               </div>
               <div className='w-full flex flex-wrap justify-around items-center gap-3 '>
                 {reviews.map(({ author, carrier, quote }, index) => (
-                  <div
+                  <motion.div
                     key={index}
+                    initial={{ scale: 0, opacity: 0 }}
+                    whileInView={{ scale: 1, opacity: 1 }}
+                    transition={{ delay: index * 0.2 }}
                     className='w-full max-w-[240px] h-56 p-4 flex flex-col justify-between bg-foreground gap-3'>
                     <h3 className='font-bold text-xl'>{`0${index + 1}`}</h3>
                     <p className='text-sm font-medium'>{quote}</p>
@@ -272,7 +323,7 @@ export default function Home() {
                         <span className='text-sm normal-case'>{carrier}</span>
                       </p>
                     </div>
-                  </div>
+                  </motion.div>
                 ))}
               </div>
             </section>
@@ -287,12 +338,16 @@ export default function Home() {
               />
               <div className='flex flex-col text-white w-full gap-4 p-4'>
                 <div className='flex flex-col gap-3'>
-                  <h2 className='text-4xl font-serif font-bold'>
-                    Book a Seat Now
-                  </h2>
-                  <p className='font-medium'>
-                    Fill out this form and get out your seat.
-                  </p>
+                  <Reveal inverseDirection>
+                    <h2 className='text-4xl font-serif font-bold'>
+                      Book a Seat Now
+                    </h2>
+                  </Reveal>
+                  <Reveal delay={0.2}>
+                    <p className='font-medium'>
+                      Fill out this form and get out your seat.
+                    </p>
+                  </Reveal>
                 </div>
 
                 <form
